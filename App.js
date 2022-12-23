@@ -11,10 +11,9 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
-  const url_pre =
-    "https://api.themoviedb.org/3/search/movie?api_key=ea5b7a6c41593097011e262eae16bb2e&query=";
+  const url_pre ="https://api.themoviedb.org/3/search/movie?api_key=ea5b7a6c41593097011e262eae16bb2e&query=";
   const url_pos = "&language=pt-BR";
-  let url_final = "";
+  let url_final = " ";
 
   const pesquisaFilme = async (entrada) => {
     url_final = url_pre + entrada + url_pos;
@@ -63,9 +62,9 @@ export default function App() {
 
   return (
     <ScrollView indicatorStyle={styles.container}>
-      <View style={{ flex: 1, height: screenHeight }}>
+      <View style={{ flex: 1, height: screenHeight, width: screenWidth}}>
         <View style={{ ...StyleSheet.absoluteFill, backgroundColor: "#000" }}>
-          <Text style={styles.textTop}>App Movies V1.0</Text>
+          <Text style={styles.textTop}>App Movies V1.1</Text>
           <Text style={styles.textCenter}>React Native - Expo - API TMDB</Text>
           <View style={styles.viewSearch}>
             <TextInput
